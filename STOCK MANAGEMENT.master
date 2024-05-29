@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="STOCK MANAGEMENT.master.cs" Inherits="STOCK_MANAGEMENT" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            text-align: center;
+        }
+        .style2
+        {
+            font-size: xx-large;
+            font-family: "Times New Roman", Times, serif;
+            color: #0000FF;
+        }
+        .style3
+        {
+            color: #0000FF;
+            background-color: #FFCC66;
+        }
+        .newStyle1
+        {
+            font-size: 36px;
+        }
+        .newStyle2
+        {
+            font-size: 46px;
+        }
+        .style5
+        {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body bgcolor="#6666ff">
+    <form id="form1" runat="server">
+    <div>
+        <div class="style1">
+            <span class="style2"><strong><span>STOCK MANAGEMENT</span></strong></span><strong><br 
+                class="style3" />
+            <br class="style3" />
+            </strong>
+            <br />
+            <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" 
+                DynamicHorizontalOffset="1" Font-Names="Arial Black" Font-Size="X-Large" 
+                ForeColor="Black" Orientation="Horizontal" StaticSubMenuIndent="10px" 
+                Width="1280px" RenderingMode="Table" Height="62px" BorderStyle="Solid">
+                <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#FFFBD6" />
+                <DynamicSelectedStyle BackColor="#FFCC66" />
+                <Items>
+                    <asp:MenuItem Text="HOME     " Value="HOME PAGE    ">
+                        <asp:MenuItem NavigateUrl="~/Intro.aspx" Text="introduction" 
+                            Value="introduction"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="MASTER" Value="MASTER      ">
+                        <asp:MenuItem NavigateUrl="~/DealerInfo.aspx" Text="Dealer info" 
+                            Value="Dealer info"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/productInfo.aspx" Text="Product info" 
+                            Value="Product info"></asp:MenuItem>
+                        <asp:MenuItem Text="customer info" Value="customer info" 
+                            NavigateUrl="~/customer info.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/company.aspx" Text="company info" 
+                            Value="company info"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="TRANSACTION      " Value="TRANSACTION      ">
+                        <asp:MenuItem Text="sale" Value="sale/purchase" NavigateUrl="~/sale.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="purchase" Value="stock management" 
+                            NavigateUrl="~/purchase.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="stock " Value="stock " NavigateUrl="~/TOTAL STOCK.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="REPORTS      " Value="REPORTS      ">
+                        <asp:MenuItem Text="R STOCK" Value="R STOCK" NavigateUrl="~/R STOCK.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="R PURCHASE" Value="New Item" 
+                            NavigateUrl="~/R PURCHASE.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="R SALE" Value="New Item" NavigateUrl="~/R SALE.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/datewise SALE.aspx" Text="datewiseSALE" 
+                            Value="datewiseSALE">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/DatewisepurchaseR.aspx" Text="datewisePURCHASE" 
+                            Value="datewisePURCHASE"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/datewiseStock.aspx" Text="datewiseSTOCK" 
+                            Value="datewiseSTOCK"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/rcompany.aspx" Text="CompanyWise Purchase" 
+                            Value="CompanyWise Purchase"></asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" 
+                    BackColor="#3333FF" />
+                <StaticSelectedStyle BackColor="#FFCC66" />
+            </asp:Menu>
+            <br />
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p class="style5">
+                &nbsp;</p>
+            <p class="style5" style="color: #C0C0C0">
+                &nbsp;</p>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
